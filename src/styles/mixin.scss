@@ -1,0 +1,43 @@
+/** mix in**/
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// 값을 변경해야하는 경우 이걸로 사용험
+@mixin flex-layout($direction:row, $justify:center, $align:center){
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+//버튼부분 스타일 같은거
+@mixin round-button($bg:#eee, $color:#222){
+  width: 100%;
+  padding: 0.7rem;
+  background-color: $bg;
+  color: $color;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  &:hover{
+    filter: brightness(0.7);
+  }
+}
+//버튼부분 스타일 2
+@mixin round-button-list($bg:#eee, $color:#222){
+      width: 100%;
+      padding: 0.7rem;
+      background-color: $bg;
+      color: $color;
+      font-weight: bolder;
+      cursor: pointer;
+      border-radius: 2rem;
+      outline: none;
+      border: none;
+      &:hover {
+      background-color: #cbe2eb;
+      }
+    }
