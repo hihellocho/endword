@@ -20,11 +20,11 @@ export const dictionary = async (startChar) => {
   const originURL = `${base}?${params.toString()}`;
   console.log(originURL);
   //브라우저 보안이 강화되있어서. 로컬호스트에서 가져오면 실행을 안시켜줘. 그래서 보안기능 약화되는 걸 추가해서 사용. 개발용으로 확인되야해서  넣어줌. ┓
-  // const proxyURL = `https://corsproxy.io/?${encodeURIComponent(originURL)}`;
+  const proxyURL = `https://corsproxy.io/?${encodeURIComponent(originURL)}`;
 
   //깃에 올릴때는 보안설정 안해야해서
-   const proxyURL = originURL;
-   
+  //  const proxyURL = originURL;
+
   //오류체크하는
   try{
     const res = await fetch(proxyURL);
